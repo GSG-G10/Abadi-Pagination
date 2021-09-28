@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://api.unsplash.com/search/collections?page=${number}&limit=10&query=cat&client_id=V0G0X78-1-W7P0OS0w1Y7bift63SE2YXdP1bYH7jT30`
+      `https://api.unsplash.com/search/collections?page=${number}&per_page=8&query=cat&client_id=V0G0X78-1-W7P0OS0w1Y7bift63SE2YXdP1bYH7jT30`
     )
       .then((res) => res.json())
       .then((data) => setDataa(data.results));
@@ -44,7 +44,7 @@ function App() {
                 <Card
                   hoverable
                   style={{ width: 240, margin: '20px', flex: '2' }}
-                  cover={<img alt="example" src={ele.cover_photo.urls.small} />}
+                  cover={<img alt="example" src={ele.cover_photo.urls.small} style={{width:'240px' , height: '240px' ,objectFit:'cover' }}/>}
                 >
                   <Meta
                     title={
