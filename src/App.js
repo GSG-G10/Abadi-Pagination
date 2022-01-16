@@ -44,7 +44,17 @@ function App() {
                 <Card
                   hoverable
                   style={{ width: 240, margin: '20px', flex: '2' }}
-                  cover={<img alt="example" src={ele.cover_photo.urls.small} style={{width:'240px' , height: '240px' ,objectFit:'cover' }}/>}
+                  cover={
+                    <img
+                      alt="example"
+                      src={ele.cover_photo.urls.small}
+                      style={{
+                        width: '240px',
+                        height: '240px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  }
                 >
                   <Meta
                     title={
